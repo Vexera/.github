@@ -8,10 +8,12 @@
     ":docker",
     ":label(dependencies)",
     ":semanticCommits",
-    ":semanticCommitTypeAll(build)",
+    ":semanticCommitType(build)",
     ":semanticCommitScope(deps)"
   ],
-  "baseBranches": ["$default", "/^rewrite\\/.*/"],
+  "ignorePresets": [
+    ":semanticPrefixFixDepsChoreOthers"
+  ],
   "branchPrefix": "deps/",
   "dependencyDashboardAutoclose": true,
   "dependencyDashboardLabels": ["dependencies"],
