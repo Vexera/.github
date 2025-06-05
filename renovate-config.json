@@ -8,7 +8,7 @@
     ":docker",
     ":label(dependencies)",
     ":semanticCommits",
-    ":semanticCommitType(build)",
+    ":semanticCommitTypeAll(build)",
     ":semanticCommitScope(deps)"
   ],
   "baseBranches": ["$default", "/^rewrite\\/.*/"],
