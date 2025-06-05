@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":configMigration",
+    ":docker",
+    ":label(dependencies)",
+    ":semanticCommits",
+    ":semanticCommitType(build)",
+    ":semanticCommitScope(deps)"
+  ],
+  "baseBranches": ["$default", "/^rewrite\\/.*/"],
+  "branchPrefix": "deps/",
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardLabels": ["dependencies"],
+  "rollbackPrs": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["security"]
+  },
+  "reviewersFromCodeOwners": true
+}
